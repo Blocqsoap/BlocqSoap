@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --cream:#f8f5ee;--stone:#e8e1d6;--paper:#fffdf8;--ink:#171412;--muted:#716960;--gold:#b3914a;--gold2:#d5b76b;--dark:#25211d;--line:rgba(179,145,74,.25);--green:#496b52;
+  --cream:#f8f5ee;--stone:#e8e1d6;--paper:#fffdf8;--ink:#171412;--muted:#716960;--gold:#b3914a;--gold2:#b3914a;--dark:#25211d;--line:rgba(179,145,74,.25);--green:#496b52;
 }
 *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{font-family:Inter,sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%} a{text-decoration:none;color:inherit}
 .nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:18px 56px;background:rgba(248,245,238,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
@@ -176,7 +176,7 @@ footer{background:#171412;color:#bdb4a7;padding:38px 70px;display:flex;justify-c
 <body>
 <nav class="nav">
     <a class="logo" href="#">
-        <img src="images/logo.png" alt="Blocq Soap Logo" class="logo-image"></a><ul><li><a href="#oplossing">Oplossing</a></li><li><a href="#probleem">Probleem</a></li><li><a href="#businesscase">Businesscase</a></li><li><a href="#pilot">Demo</a></li></ul><a class="cta" href="#contact">contact</a></nav>
+        <img src="images/logo.png" alt="Blocq Soap Logo" class="logo-image"></a><ul><li><a href="#oplossing">Oplossing</a></li><li><a href="#probleem">Probleem</a></li><li><a href="#businesscase">Businesscase</a></li><li><a href="#demo">Demo</a></li></ul><a class="cta" href="#contact">contact</a></nav>
 <header class="hero">
   <div class="hero-copy reveal">
     <div class="eyebrow">Premium handhygiëne</div>
@@ -308,7 +308,7 @@ footer{background:#171412;color:#bdb4a7;padding:38px 70px;display:flex;justify-c
     </div>
   </div>
 </section>
-<section class="pilot" id="pilot"><div><div class="eyebrow reveal">Demo</div><h2 class="section-title reveal">Blokzeep dispenser zelf ervaren?</h2><p class="intro reveal">Ervaar zelf hoe Blocq Soap het gebruiksgemak, duurzaamheid en een premium uitstraling combineert. Tijdens een demonstratie laten we zien hoe de dispenser werkt en bespreken we de mogelijkheden voor jouw organisatie.</p></div><div class="steps"><div class="step reveal"><strong>01</strong><h3>Kennismaking</h3><p>We bespreken uw huidige situatie, wensen en kijken samen of Blocq Soap binnen uw bedrijf past.</p></div><div class="step reveal"><strong>02</strong><h3>Demo in praktijk</h3><p>We laten zien hoe de dispenser werkt en u ervaart het gevoel van zeep in poedervorm.</p></div><div class="step reveal"><strong>03</strong><h3>Installatie</h3><p>Wanneer gewenst verzorgen wij de levering en installatie van de dispensers.</p></div><div class="step reveal"><strong>04</strong><h3>Feedback & data</h3><p>We bespreken de ervaringen en verzamelen de feedback.</p></div></div></section>
+<section class="pilot" id="demo"><div><div class="eyebrow reveal">Demo</div><h2 class="section-title reveal">Blokzeep dispenser zelf ervaren?</h2><p class="intro reveal">Ervaar zelf hoe Blocq Soap het gebruiksgemak, duurzaamheid en een premium uitstraling combineert. Tijdens een demonstratie laten we zien hoe de dispenser werkt en bespreken we de mogelijkheden voor jouw organisatie.</p></div><div class="steps"><div class="step reveal"><strong>01</strong><h3>Kennismaking</h3><p>We bespreken uw huidige situatie, wensen en kijken samen of Blocq Soap binnen uw bedrijf past.</p></div><div class="step reveal"><strong>02</strong><h3>Demo in praktijk</h3><p>We laten zien hoe de dispenser werkt en u ervaart het gevoel van zeep in poedervorm.</p></div><div class="step reveal"><strong>03</strong><h3>Installatie</h3><p>Wanneer gewenst verzorgen wij de levering en installatie van de dispensers.</p></div><div class="step reveal"><strong>04</strong><h3>Feedback & data</h3><p>We bespreken de ervaringen en verzamelen de feedback.</p></div></div></section>
 <section class="cta-section" id="contact"><div><div class="eyebrow reveal"></div><h2 class="section-title reveal">Interesse in<br>Blocq Soap?<br>
 </h2><p class="intro reveal">Vraag een korte demo aan of direct een prijsindicatie. We laten zien hoe de dispenser werkt en bespreken of het past binnen jullie organisatie. <br><br>
 
@@ -354,7 +354,7 @@ footer{background:#171412;color:#bdb4a7;padding:38px 70px;display:flex;justify-c
         <a href="#oplossing">Oplossing</a>
         <a href="#probleem">Probleem</a>
         <a href="#businesscase">Businesscase</a>
-        <a href="#pilot">Demo</a>
+        <a href="#demo">Demo</a>
     </div></footer>
 <script>
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
