@@ -28,7 +28,7 @@ h1{
     line-height:1;
     letter-spacing:-.03em;
     margin-bottom:24px;
-}h1 em{color:var(--gold);font-style:normal}.lead{font-size:20px;line-height:1.65;color:var(--muted);max-width:640px;margin-bottom:34px}.hero-buttons{display:flex;gap:16px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:16px 24px;font-size:13px;text-transform:uppercase;letter-spacing:.1em;font-weight:800}.btn-dark{background:var(--ink);color:var(--cream)}.btn-gold{background:var(--gold);color:white}.btn-light{border:1px solid var(--line);color:var(--muted);background:rgba(255,255,255,.35)}
+}h1 em{color:var(--gold);font-style:normal}.lead{font-size:20px;line-height:1.65;color:var(--muted);max-width:640px;margin-bottom:34px}.hero-buttons{display:flex;gap:16px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:16px 24px;font-size:13px;text-transform:uppercase;letter-spacing:.1em;font-weight:800;border:1px solid transparent;transition:all .2s ease}.btn-dark{background:var(--ink);color:var(--cream)}.btn-dark:hover{background:var(--gold);color:white}.btn-gold{background:var(--gold);color:white}.btn-gold:hover{border-color:#c9a456;box-shadow:0 0 0 1px #c9a456}.btn-light{border:1px solid var(--line);color:var(--muted);background:rgba(255,255,255,.35)}.btn-light:hover{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
 .hero-visual{
     display:flex;
     align-items:center;
@@ -176,7 +176,7 @@ footer{background:#171412;color:#bdb4a7;padding:38px 70px;display:flex;justify-c
 <body>
 <nav class="nav">
     <a class="logo" href="#">
-        <img src="images/logo.png" alt="Blocq Soap Logo" class="logo-image"></a><ul><li><a href="#oplossing">Oplossing</a></li><li><a href="#probleem">Probleem</a></li><li><a href="#businesscase">Businesscase</a></li><li><a href="#pilot">Demo</a></li></ul><a class="cta" href="#contact">vraag prijs aan</a></nav>
+        <img src="images/logo.png" alt="Blocq Soap Logo" class="logo-image"></a><ul><li><a href="#oplossing">Oplossing</a></li><li><a href="#probleem">Probleem</a></li><li><a href="#businesscase">Businesscase</a></li><li><a href="#pilot">Demo</a></li></ul><a class="cta" href="#contact">contact</a></nav>
 <header class="hero">
   <div class="hero-copy reveal">
     <div class="eyebrow">Premium handhygiëne</div>
@@ -352,9 +352,9 @@ footer{background:#171412;color:#bdb4a7;padding:38px 70px;display:flex;justify-c
 
     <div class="footer-links">
         <a href="#oplossing">Oplossing</a>
+        <a href="#probleem">Probleem</a>
         <a href="#businesscase">Businesscase</a>
         <a href="#pilot">Demo</a>
-        <a href="#contact">Contact</a>
     </div></footer>
 <script>
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
