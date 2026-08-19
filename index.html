@@ -171,12 +171,206 @@ footer{background:#171412;color:#bdb4a7;padding:38px 70px;display:flex;justify-c
     letter-spacing:.12em;
     color:#bdb4a7;
 }
+.story-section{
+    padding:0;
+    background:var(--cream);
+}
+
+.story-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:0;
+    align-items:stretch;
+}
+
+.story-copy{
+    background:var(--cream);
+    padding:56px 70px 48px;
+}
+
+.story-copy .eyebrow{
+    margin-bottom:16px;
+}
+
+.story-section .section-title{
+    max-width:760px;
+    margin-bottom:10px;
+    font-size:clamp(38px,4vw,58px);
+}
+
+.story-lead{
+    font-size:16px;
+    line-height:1.55;
+    color:var(--ink);
+    font-style:italic;
+    max-width:760px;
+    margin-bottom:18px;
+}
+
+.story-blocks{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.story-block{
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:14px 18px;
+    background:rgba(255,255,255,.22);
+}
+
+.story-block h3{
+    font-family:'Playfair Display',serif;
+    font-size:21px;
+    line-height:1.2;
+    margin-bottom:6px;
+    color:var(--ink);
+}
+
+.story-block p{
+    font-size:13px;
+    line-height:1.5;
+    color:#514a44;
+}
+
+.story-block p + p{
+    margin-top:7px;
+}
+
+.story-highlight{
+    margin-top:12px;
+    padding:12px 18px;
+    border:1px solid var(--line);
+    border-radius:16px;
+    font-family:'Playfair Display',serif;
+    font-size:20px;
+    font-weight:600;
+    color:var(--gold);
+    background:rgba(255,255,255,.28);
+}
+
+.story-founders{
+    background:var(--stone);
+    padding:70px 44px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    align-items:center;
+}
+
+.founder{
+    text-align:left;
+}
+
+.founder:nth-child(2){
+    margin-top:70px;
+}
+
+.founder-photo{
+    width:100%;
+    overflow:hidden;
+    border-radius:24px;
+    background:var(--paper);
+    border:1px solid rgba(23,20,18,.06);
+    box-shadow:0 18px 45px rgba(23,20,18,.10);
+}
+
+.founder-photo img{
+    width:100%;
+    aspect-ratio:4 / 5;
+    object-fit:cover;
+    display:block;
+}
+
+.founder-name{
+    margin-top:12px;
+    font-family:'Playfair Display',serif;
+    font-size:18px;
+    font-weight:600;
+    color:var(--ink);
+}
+
+.founder-role{
+    margin-top:3px;
+    color:var(--gold);
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-weight:700;
+}
+
+@media(max-width:950px){
+
+    .story-grid{
+        grid-template-columns:1fr;
+    }
+
+    .story-copy{
+        padding:60px 18px 45px;
+    }
+
+    .story-founders{
+        padding:48px 18px;
+        grid-template-columns:1fr 1fr;
+        max-width:none;
+    }
+
+    .story-section .section-title{
+        font-size:clamp(32px,8vw,44px);
+    }
+
+    .story-lead{
+        font-size:16px;
+    }
+
+    .story-block{
+        padding:15px 16px;
+    }
+
+    .story-block h3{
+        font-size:20px;
+    }
+
+    .story-block p{
+        font-size:14px;
+        line-height:1.55;
+    }
+}
+
+@media(max-width:560px){
+
+    .story-founders{
+        gap:12px;
+        padding:40px 18px;
+    }
+
+    .founder:nth-child(2){
+        margin-top:28px;
+    }
+
+    .founder-photo{
+        border-radius:18px;
+    }
+
+    .founder-name{
+        font-size:15px;
+    }
+
+    .founder-role{
+        font-size:9px;
+    }
+
+    .story-highlight{
+        font-size:18px;
+    }
+}
 </style>
 </head>
 <body>
 <nav class="nav">
     <a class="logo" href="#">
-        <img src="images/logo.png" alt="Blocq Soap Logo" class="logo-image"></a><ul><li><a href="#oplossing">Oplossing</a></li><li><a href="#probleem">Probleem</a></li><li><a href="#businesscase">Businesscase</a></li><li><a href="#demo">Demo</a></li></ul><a class="cta" href="#contact">contact</a></nav>
+        <img src="images/logo.png" alt="Blocq Soap Logo" class="logo-image"></a><ul><li><a href="#oplossing">Oplossing</a></li><li><a href="#probleem">Probleem</a></li><li><a href="#businesscase">Businesscase</a></li><li><a href="#ons-verhaal">ons verhaal</a></li></ul><a class="cta" href="#contact">contact</a></nav>
 <header class="hero">
   <div class="hero-copy reveal">
     <div class="eyebrow">Premium handhygiëne</div>
@@ -227,7 +421,7 @@ footer{background:#171412;color:#bdb4a7;padding:38px 70px;display:flex;justify-c
     <div class="trust-item"><strong>Verlaagt</strong><span>operationele kosten</span></div>
     <div class="trust-item"><strong>Eco</strong><span>certified</span></div>
     <div class="trust-item"><strong>90%</strong><span>minder water</span></div></div></div>
-<section class="solution" id="oplossing"><div class="solution-grid"><div><div class="eyebrow reveal">De oplossing</div><h2 class="section-title reveal">Blokzeep voor professioneel gebruik.</h2><p class="intro reveal">Blocq Soap combineert de duurzaamheid van vaste zeep met het gebruiksgemak van een moderne dispenser. Geen losse zeepblokjes, geen plastic flessen en geen ingewikkelde handelingen. Alleen precies de juiste hoeveelheid pure zeep in poedervorm, op een hygiënische en stijlvolle manier.</p><div class="pills reveal"><span class="pill">RVS design</span><span class="pill">Minder bijvullen</span><span class="pill">Zacht voor de huid</span><span class="pill">Premium beleving</span><span class="pill">Natuurlijke zeep</span><span class="pill">Geen plastic flesjes</span><span class="pill">Pilot-ready</span><span class="pill">Duurzaam</span></div></div><div class="video-card reveal">
+<section class="solution" id="oplossing"><div class="solution-grid"><div><div class="eyebrow reveal">De oplossing</div><h2 class="section-title reveal">Blokzeep voor professioneel gebruik.</h2><p class="intro reveal">Blocq Soap combineert de duurzaamheid van vaste zeep met het gebruiksgemak van een moderne dispenser. Geen losse zeepblokjes, geen plastic flessen en geen ingewikkelde handelingen. Alleen precies de juiste hoeveelheid pure zeep in poedervorm, op een hygiënische en stijlvolle manier.</p><div class="pills reveal"><span class="pill">RVS design</span><span class="pill">Minder bijvullen</span><span class="pill">Zacht voor de huid</span><span class="pill">Premium beleving</span><span class="pill">Natuurlijke zeep</span><span class="pill">Geen plastic flesjes</span><span class="pill">Duurzaam</span></div></div><div class="video-card reveal">
     <video autoplay muted loop playsinline preload="auto">
       <source src="video/filmpje.mp4" type="video/mp4">
     </video>
@@ -245,7 +439,7 @@ footer{background:#171412;color:#bdb4a7;padding:38px 70px;display:flex;justify-c
 
     Veel organisaties zoeken daarom naar een oplossing die duurzamer én efficiënter werkt.
 </p>
-</div><div class="cards"><div class="card reveal"><div class="icon">↻</div><h3>Veel onderhoud</h3><p>Het controleren, bijvullen en schoonmaken van dispensers kost dagelijks tijd en aandacht.</p></div><div class="card reveal"><div class="icon">♻</div><h3>Plastic afval</h3><p>Recyclebare flessen blijven flessen: ze moeten geproduceerd, vervoerd en afgevoerd worden.</p></div><div class="card reveal"><div class="icon">💧</div><h3>Transport van water</h3><p>Vloeibare zeep bestaat grotendeels uit water. Dat maakt opslag en transport onnodig zwaar.</p></div><div class="card reveal"><div class="icon">🔒</div><h3>Verspilling en diefstal</h3><p>Flesjes zijn makkelijk mee te nemen; restjes blijven achter in flessen of dispensers en worden vaak weggegooid voordat ze volledig zijn gebruikt..</p></div>
+</div><div class="cards"><div class="card reveal"><div class="icon">↻</div><h3>Veel onderhoud</h3><p>Het controleren, bijvullen en schoonmaken van dispensers kost dagelijks tijd en aandacht.</p></div><div class="card reveal"><div class="icon">♻️</div><h3>Plastic afval</h3><p>Recyclebare flessen blijven flessen: ze moeten geproduceerd, vervoerd en afgevoerd worden.</p></div><div class="card reveal"><div class="icon">💧</div><h3>Transport van water</h3><p>Vloeibare zeep bestaat grotendeels uit water. Dat maakt opslag en transport onnodig zwaar.</p></div><div class="card reveal"><div class="icon">🔒</div><h3>Verspilling en diefstal</h3><p>Flesjes zijn makkelijk mee te nemen; restjes blijven achter in flessen of dispensers en worden vaak weggegooid voordat ze volledig zijn gebruikt..</p></div>
 </div></div></section>
 <section class="calculator" id="businesscase">
   <div class="calc-grid">
@@ -308,7 +502,87 @@ footer{background:#171412;color:#bdb4a7;padding:38px 70px;display:flex;justify-c
     </div>
   </div>
 </section>
-<section class="pilot" id="demo"><div><div class="eyebrow reveal">Demo</div><h2 class="section-title reveal">Blokzeep dispenser zelf ervaren?</h2><p class="intro reveal">Ervaar zelf hoe Blocq Soap het gebruiksgemak, duurzaamheid en een premium uitstraling combineert. Tijdens een demonstratie laten we zien hoe de dispenser werkt en bespreken we de mogelijkheden voor jouw organisatie.</p></div><div class="steps"><div class="step reveal"><strong>01</strong><h3>Kennismaking</h3><p>We bespreken uw huidige situatie, wensen en kijken samen of Blocq Soap binnen uw bedrijf past.</p></div><div class="step reveal"><strong>02</strong><h3>Demo in praktijk</h3><p>We laten zien hoe de dispenser werkt en u ervaart het gevoel van zeep in poedervorm.</p></div><div class="step reveal"><strong>03</strong><h3>Installatie</h3><p>Wanneer gewenst verzorgen wij de levering en installatie van de dispensers.</p></div><div class="step reveal"><strong>04</strong><h3>Feedback & data</h3><p>We bespreken de ervaringen en verzamelen de feedback.</p></div></div></section>
+<section class="story-section" id="ons-verhaal">
+  <div class="story-grid">
+    <div class="story-copy">
+
+      <div class="eyebrow reveal">
+        Ons verhaal
+      </div>
+
+      <div class="story-blocks reveal">
+
+        <div class="story-block">
+          <h3>Waar het begon</h3>
+          <p>
+            Het begon als een studieproject om horeca slimmer, duurzamer en efficiënter te maken. We spraken met veel bedrijven, deden onderzoek naar dagelijkse processen en ontdekten hoeveel kansen er nog liggen in de operationele processen. 
+          </p>
+          <p>
+            Na onze studie wisten we nog niet precies welke kant we op wilden. Wat we wél wisten, is dat we altijd de ambitie hadden om ooit zelf te ondernemen. Wij zagen kansen in de markt door ons studieproject en het werd al snel een startup waar we echt in geloofden.
+          </p>
+        </div>
+
+        <div class="story-block">
+          <h3>Wat we misten</h3>
+          <p>
+            Tijdens ons onderzoek zagen we dat veel oplossingen in het bedrijfsleven
+            óf praktisch, óf duurzaam, óf luxe zijn. Juist de combinatie van die drie
+            is vaak lastig te realiseren. Zo ook met handzeep.
+          </p>
+          <p>
+            Vanuit die gedachte is Blocq Soap opgericht: een premium dispenser
+            die vaste zeep combineert met gebruiksgemak, een luxe uitstraling
+            en minder verspilling.
+          </p>
+        </div>
+
+        <div class="story-block">
+          <h3>Van idee naar praktijk</h3>
+          <p>
+            Sindsdien zijn we het concept steeds verder gaan ontwikkelen.
+            In samenwerking met Fablab voor technische tekeningen en door
+            de deelname aan het startupprogramma van de NOM om de
+            problem-market fit en problem-solution fit aan te scherpen.
+          </p>
+          <p>
+            Wat eerst een project was, groeide zo daadwerkelijk uit tot een startup.
+            Nu zijn we bezig met de volgende fase: Blocq Soap samen met de markt
+            testen, feedback ophalen en bewijzen dat het ook in de praktijk werkt.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-founders reveal">
+      <div class="founder">
+        <div class="founder-photo">
+          <img src="images/ole.jpg" alt="Ole van Daalen - Co-founder Blocq Soap">
+        </div>
+        <div class="founder-name">
+          Ole van Daalen
+        </div>
+        <div class="founder-role">
+          Co-founder
+        </div>
+      </div>
+      <div class="founder">
+        <div class="founder-photo">
+          <img src="images/erik.jpg" alt="Erik Bakker - Co-founder Blocq Soap">
+        </div>
+        <div class="founder-name">
+          Erik Bakker
+        </div>
+        <div class="founder-role">
+          Co-founder
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 <section class="cta-section" id="contact"><div><div class="eyebrow reveal"></div><h2 class="section-title reveal">Interesse in<br>Blocq Soap?<br>
 </h2><p class="intro reveal">Vraag een korte demo of direct een prijsindicatie aan. We laten graag zien hoe de dispenser werkt en bespreken of het past binnen jullie organisatie. <br><br>
 
